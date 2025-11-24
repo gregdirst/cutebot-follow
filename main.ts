@@ -23,11 +23,23 @@ basic.forever(function () {
         cuteBot.colorLight(cuteBot.RGBLights.RGB_L, 0x00ff00)
         cuteBot.motors(15, 20)
     } else if (cuteBot.tracking(cuteBot.TrackingState.L_R_unline)) {
-        basic.showIcon(IconNames.Sad)
+        basic.showLeds(`
+            . . . . .
+            . # . # .
+            . . . . .
+            # # # # #
+            . . . . .
+            `)
         cuteBot.colorLight(cuteBot.RGBLights.ALL, 0xff0000)
         cuteBot.motors(-10, -10)
     } else {
-        basic.showIcon(IconNames.Happy)
+        basic.showLeds(`
+            . . . . .
+            . # . # .
+            . . . . .
+            # . . . #
+            . # # # .
+            `)
         cuteBot.colorLight(cuteBot.RGBLights.ALL, 0x00ff00)
         cuteBot.motors(20, 20)
     }
